@@ -1,0 +1,50 @@
+<form [formGroup]="form" class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Numele echipei</mat-label>
+    <input formControlName="teamName" matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Culorile echipei</mat-label>
+    <input formControlName="teamColors" matInput>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Delegatii echipei</mat-label>
+    <input formControlName="teamDelegates" matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Antrenorii echipei</mat-label>
+    <input formControlName="teamCoaches" matInput>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Liga</mat-label>
+    <mat-select formControlName="league">
+      <mat-option *ngFor="let randomLeague of league" [value]="randomLeague">{{randomLeague}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Jucatorii</mat-label>
+  <mat-select formControlName="players" multiple>
+    <mat-option *ngFor="let randomPlayer of teamPlayers" [value]="randomPlayer">{{randomPlayer}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+  <br>
+
+  <button
+    class="waves-effect waves-light btn col s12 rm-style-button"
+    (click)="onSubmit()">
+    Adauga
+  </button>
+</form>
+
+
+<app-alborz-alert #appAlert></app-alborz-alert>
+<app-alborz-spinner color="primary" *ngIf="showSpinner" ></app-alborz-spinner>
+
+

@@ -1,0 +1,18 @@
+<div class="alborz-theme">
+  <mat-toolbar [color]="color">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="emitToggleSidenav()">menu</mat-icon>
+      </button>
+      <h1>ALBORZ</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/minifotbal'"> Minifotbal </a>
+        <a mat-button [routerLink]="'/campionat'"> Campionat </a>
+        <a mat-button [routerLink]="'/descarcari'"> Descarcari </a>
+        <a mat-button [routerLink]="'/contact'"> Contact </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+

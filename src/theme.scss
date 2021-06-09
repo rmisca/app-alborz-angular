@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+@import 'lib/core/theming/_palette';
+@include mat-core();
+
+//$alborz-primary: mat-palette($mat-alborzpalette, 500, 900, 500);
+//$alborz-accent:  mat-palette($mat-pink, 500, 900, A100);
+//$alborz-warn:    mat-palette($mat-deep-orange);
+//$alborz-theme: mat-light-theme($alborz-primary, $alborz-accent, $alborz-warn);
+//@include angular-material-theme($alborz-theme);
+
+.alborz-theme {
+  $alborz-alternate-primary: mat-palette($mat-alborzpalette);
+  $alborz-alternate-accent:  mat-palette($mat-yellow, 400);
+  $alborz-alternate-warn:  mat-palette($mat-alborzpalette, A700);
+
+  $alborz-theme: mat-light-theme($alborz-alternate-primary, $alborz-alternate-accent, $alborz-alternate-warn);
+
+  @include angular-material-theme($alborz-theme);
+
+}

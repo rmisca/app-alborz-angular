@@ -1,0 +1,23 @@
+<mat-sidenav-container class="alborz-theme">
+  <mat-sidenav #sidenav opened mode="side">
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/clasamente'"> Clasamente </a>
+      <a mat-list-item [routerLink]="'/program-etape'"> Program Etape </a>
+      <a mat-list-item [routerLink]="'/sanctiuni'"> Sanctiuni </a>
+      <a mat-list-item [routerLink]="'/cupa-multinationalelor'"> Cupa Multinationalelor </a>
+      <a mat-list-item [routerLink]="'/cupa-de-iarna'"> Cupa De Iarna </a>
+      <a mat-list-item [routerLink]="'/cupa-de-vara'"> Cupa De Vara </a>
+      <a mat-list-item [routerLink]="'/adauga-jucator'"> Adauga jucator </a>
+      <a mat-list-item [routerLink]="'/adauga-echipa'"> Adauga echipa </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="">Inchide</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
